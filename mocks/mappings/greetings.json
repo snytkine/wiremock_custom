@@ -1,0 +1,13 @@
+{
+    "request":{
+        "method":"GET",
+        "url": "/greetings"
+    },
+    "response":{
+        "status": 200,
+        "headers":{
+            "content-type":"application/json"
+        },
+        "bodyFileName":"greetings_response.json"
+    }
+}

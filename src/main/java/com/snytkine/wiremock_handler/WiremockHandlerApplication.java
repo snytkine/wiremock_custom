@@ -31,6 +31,7 @@ public class WiremockHandlerApplication {
 		WireMockServer wiremock = new WireMockServer(
 				WireMockConfiguration.options()
 						.port(serverPort)
+						.usingFilesUnderDirectory("mocks")
 						.adminAuthenticator(customAdminAuthenticator));
 		wiremock.start();
 		log.info("WireMock started on port {}", wiremock.port());
