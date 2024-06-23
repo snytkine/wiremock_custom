@@ -8,12 +8,16 @@
         </layout>
     </appender>
 
-    <logger name="WireMock" level="DEBUG" additivity="false">
-        <appender-ref ref="CONSOLE"/>
+    <logger name="WireMock" level="DEBUG">
+        <appender-ref ref="CONSOLE" />
     </logger>
+    <logger name="org.eclipse.jetty.ee10.servlet.DefaultServlet" level="ERROR">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+    <!-- org.eclipse.jetty.ee10.servlet.DefaultServlet -->
 
     <root level="INFO">
-        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="CONSOLE" />
     </root>
 
 </configuration>
