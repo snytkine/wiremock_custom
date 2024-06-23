@@ -27,6 +27,16 @@ public class CustomAdminAuthenticator implements Authenticator {
             return false;
         }
 
+        if(method.equals("DELETE")){
+            log.error("DELETE method not allowed");
+            return false;
+        }
+
+        if(url.equals("/settings")){
+            log.error("Updating global settings via API is not allowed");
+            return false;
+        }
+
         if (method.equals("GET")) {
             log.info("GET request is allowed for __admin endpoint {}", url);
             return true;
